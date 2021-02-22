@@ -11,8 +11,9 @@ buttonTest.addEventListener('click', titleClickHandler);
 
 /*ARTICLES*/
 function titleClickHandler(event){
-  const clickedElement = this;
   event.preventDefault();
+  const clickedElement = this;
+
   console.log('Link was clicked!', event);
 
   /* remove class 'active' from all article links  */
@@ -38,8 +39,10 @@ function titleClickHandler(event){
 
   /* get 'href' attribute from the clicked link */
 
+  const articleSelector = href;     /* const this = element.getAttribute('href'); */
+  articleSelector.getAttribute('#');
 
-
+  console.log(articleSelector);
 
   /* find the correct article using the selector (value of 'href' attribute) */
 
