@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /* --- 5.3 ---*/
 
@@ -79,12 +79,12 @@ function generateTitleLinks(){
 
   let html = '';
 
-    for(let article of articles){
-    /* get the article id */
-      article = document.getAttribute('article');      
-      //articleId.getAttribute(id) ?
-      //articleId.getElementById()
-      console.log('get the article id is working!', article);
+  for(let article of articles){
+  /* get the article id */
+    article = document.getAttribute('article');      
+    //articleId.getAttribute(id) ?
+    //articleId.getElementById()
+    console.log('get the article id is working!', article);
 
     /* find the title element */    //czy ten krok został wykonany poniżej?
     //querySelector do tej pory wykonywaliśmy zawsze na elemencie document
@@ -92,19 +92,19 @@ function generateTitleLinks(){
     //Dzięki temu będziemy mogli wyszukać tytuł w konkretnym artykule.
 
     /* get the title from the title element */
-      const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
 
     /* create HTML of the link */
-      const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle +'</span></a></li>';
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle +'</span></a></li>';
 
 
     /* insert link into titleList (html variable)*/
     //tu robić
     html = html + linkHTML;
     console.log('html' + html);
-    }
-   
-    titleList.innerHTML = html;
+  } 
+
+  titleList.innerHTML = html;
 }
 
 generateTitleLinks();
